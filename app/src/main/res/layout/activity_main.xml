@@ -7,12 +7,19 @@
     android:background="#060B26"
     android:orientation="vertical"
     android:padding="10dp"
+    android:weightSum="5"
     tools:context=".MainActivity">
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="0dp"
+   android:layout_weight="2"
+    android:orientation="vertical"
+    android:layout_gravity="center">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="30dp"
-        android:layout_marginTop="20dp"
+
         android:gravity="center"
         android:text="CURRENT WEATHER!"
         android:textColor="@color/white"
@@ -23,16 +30,24 @@
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_gravity="center"
-        android:layout_marginTop="30dp"
         android:padding="5dp"
         android:src="@mipmap/ic_launcher"
         android:textColor="@color/white" />
+</LinearLayout>
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="0dp"
+    android:orientation="vertical"
+    android:layout_marginTop="20dp"
+    android:layout_weight="1.5"
+    android:layout_marginLeft="20dp"
+    android:layout_gravity="left">
 
     <TextView
         android:id="@+id/textView_tempreture_ID"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_marginTop="50dp"
         android:baselineAligned="false"
         android:paddingLeft="20dp"
         android:text="00.0"
@@ -60,41 +75,61 @@
         android:text="fetching---!"
         android:textColor="@color/white"
         android:textSize="30sp"
-
         />
     <TextView
+        android:id="@+id/textView_realfeel_id"
         android:layout_width="match_parent"
         android:layout_height="30dp"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:id="@+id/descibTextView_id"
-        android:text="..............."
+        android:layout_marginTop="10dp"
+        android:paddingLeft="20dp"
+        android:text="-----"
         android:textColor="@color/white"
-        android:textSize="10sp" />
-
-    <ImageButton
-        android:id="@+id/mylocation_button_ID"
-        android:layout_width="50dp"
-        android:layout_height="40dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/ic_baseline_my_location_24"
-
+        android:textSize="20sp"
 
         />
-
-    <Button
-        android:id="@+id/button_cityFinder"
+</LinearLayout>
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="20dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+android:layout_weight="1.5"
+        android:orientation="vertical">
 
-        android:selectAllOnFocus="true"
-       android:backgroundTint="#F50404"
 
-        android:text="Find City weather here"
-        android:textColor="@color/white" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:id="@+id/descibTextView_id"
+            android:text="..............."
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/mylocation_button_ID"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/ic_baseline_my_location_24"
+
+
+            />
+
+        <Button
+            android:id="@+id/button_cityFinder"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="20dp"
+
+            android:selectAllOnFocus="true"
+            android:backgroundTint="#F50404"
+
+            android:text="Find City weather here"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
 
 
 </LinearLayout>

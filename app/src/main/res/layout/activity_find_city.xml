@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
     android:background="#060B26"
     tools:context=".Find_City">
 
@@ -13,14 +12,14 @@
         android:id="@+id/newcity_find_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:singleLine="true"
-        android:hint="City Name"
-        android:textColorHint="#848689"
-
+        android:layout_marginTop="30dp"
         android:backgroundTint="@color/white"
+        android:gravity="center"
+        android:hint="City Name"
         android:imeOptions="actionGo"
-        android:textColor="@color/white" />
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textColorHint="#848689" />
 
 
 </LinearLayout>
